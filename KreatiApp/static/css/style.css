@@ -1,0 +1,25 @@
+:root {
+    --bk-color: #f5f5f5;
+    --red: #e93754;
+    --text-color: #333333;
+    --error-color: #d61e1e;
+}
+
+body{
+    background-color: var(--bk-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: var(--red);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo{
+    width: 250px;
+    padding: 25px 25px ;
+}
