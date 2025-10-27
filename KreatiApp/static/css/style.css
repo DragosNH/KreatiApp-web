@@ -5,11 +5,19 @@
     --error-color: #d61e1e;
 }
 
+@font-face {
+    font-family: "Noto Serif Hentaigana";
+    src: url('../../static/fonts/Noto.ttf') format("truetype");
+    font-family: "Dancing Script Regular";
+    src: url('../../static/fonts/DancingScript-Regular.ttf') format("truetype");
+}
+
 body {
     background-color: var(--bk-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    font-family: "Noto Serif Hentaigana";
 }
 
 .header {
