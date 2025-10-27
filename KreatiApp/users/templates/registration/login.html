@@ -1,4 +1,5 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,10 +19,17 @@
         <h2>Log In</h2>
         <form method="post">
             {% csrf_token %}
-            {{ form }}
+            <div class="form-group">
+                {{ form.username|attr:"placeholder: Username" }}
+            </div>
+
+            <div class="form-group">
+                {{ form.password|attr:"placeholder: Password" }}
+            </div>
+
             <button type="submit">Log In</button>
         </form>
-        <span>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></span>
+        <a href="{% url 'signup' %}"><button>Sign Up</button></a>
     </div>
     {% endblock %}
 </body>

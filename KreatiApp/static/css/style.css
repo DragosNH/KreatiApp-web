@@ -32,9 +32,13 @@ body {
     padding: 25px 25px;
 }
 
+/* --------- Login page --------- */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+.form-group{
+    margin: 20px;
 }
