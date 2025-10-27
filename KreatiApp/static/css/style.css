@@ -5,21 +5,28 @@
     --error-color: #d61e1e;
 }
 
-body{
+body {
     background-color: var(--bk-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
-.header{
+.header {
     background-color: var(--red);
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-.header-logo{
+.header-logo {
     width: 250px;
-    padding: 25px 25px ;
+    padding: 25px 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
