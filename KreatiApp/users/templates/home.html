@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}KreatiApp{% endblock %}</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <img class="header-logo" src="{% static 'images/HeaderLogo.png' %}" alt="Header Logo">
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+    {% block content %}
+    {% if user.is_authenticated %}
+    Hi {{ user.username }}!
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Log Out</button>
+    </form>
+    {% else %}
+    <p>You are not logged in</p>
+    <a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+    {% endblock %}
+</body>
+
+</html>
